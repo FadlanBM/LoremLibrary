@@ -13,6 +13,6 @@ class Categories extends Model
 
     public function book()
     {
-        return $this->belongsToMany(Categories::class, 'book_category', 'book_id', 'category_id');
+        return $this->belongsToMany(Categories::class, 'book_categories','books_id', 'categories_id');
     }
 }

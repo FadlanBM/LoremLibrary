@@ -73,8 +73,8 @@ class BookManagementController extends Controller
 
         foreach ($category_id as $category_id) {
             $listcategory = new BookCategory();
-            $listcategory->book_id = $book->id;
-            $listcategory->category_id = $category_id;
+            $listcategory->books_id = $book->id;
+            $listcategory->categories_id = $category_id;
             $listcategory->save();
         }
 
