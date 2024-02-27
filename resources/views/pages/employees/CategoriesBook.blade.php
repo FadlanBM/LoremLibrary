@@ -1,7 +1,7 @@
 @extends('layouts.employees')
 @section('content_admin')
     <div class=" w-full p-6">
-        <div class="h-[89vh] bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
+        <div class="bg-white rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
             <button class="btn btn-primary" onclick="modalpost.showModal()">open modal +</button>
             <div class="overflow-x-auto mt-10">
                 <table class="table">

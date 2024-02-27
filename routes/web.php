@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminIndexController;
 use App\Http\Controllers\BookManagementController;
+use App\Http\Controllers\BorrowersController;
 use App\Http\Controllers\CategoriesManagementController;
 use App\Http\Controllers\CompleteAccountController;
 use App\Http\Controllers\EmployeeManagementController;
@@ -62,6 +63,8 @@ Route::middleware(['employeeallow'])->group(function () {
     Route::put('/employees/book/put/{id}', [BookManagementController::class, 'update'])->name('book.put');
     Route::get('/employees/edit/show/{id}', [BookManagementController::class, 'edit'])->name('book.show');
     Route::delete('/employees/book/delete/{id}', [BookManagementController::class, 'destroy']);
+
+    Route::get('/employees/borrowers', [BorrowersController::class, 'index'])->name('employees.borrowers');
 });
 
 Route::get('/logout', function () {
