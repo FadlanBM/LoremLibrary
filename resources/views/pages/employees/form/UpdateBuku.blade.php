@@ -37,16 +37,6 @@
                  </label>
                  <label class="form-control w-full">
                      <div class="label">
-                         <span class="label-text">No Inventaris</span>
-                     </div>
-                     <input type="text" name="no_inventaris" id="no_inventaris" class="input input-bordered w-full"
-                         value="{{ $book->no_inventaris }}" required />
-                     @error('no_inventaris')
-                         <small class="mt-2 text-danger">{{ $message }}</small>
-                     @enderror
-                 </label>
-                 <label class="form-control w-full">
-                     <div class="label">
                          <span class="label-text">Description</span>
                      </div>
                      <input type="text" name="description" id="description" class="input input-bordered w-full"

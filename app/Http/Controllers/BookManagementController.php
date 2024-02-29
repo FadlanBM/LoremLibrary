@@ -40,7 +40,6 @@ class BookManagementController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'author' => ['required', 'string', 'max:255'],
             'publisher' => ['required', 'string', 'max:255'],
-            'no_inventaris' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string', 'max:255'],
             'code' => ['string', 'max:255'],
             'year_published' => 'required|numeric',
@@ -56,7 +55,6 @@ class BookManagementController extends Controller
         $book->title = $request->title;
         $book->author = $request->author;
         $book->publisher = $request->publisher;
-        $book->no_inventaris = $request->no_inventaris;
         $book->description = $request->description;
         $book->year_published = $request->year_published;
         $book->code = $request->code;
@@ -108,7 +106,6 @@ class BookManagementController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'author' => ['required', 'string', 'max:255'],
             'publisher' => ['required', 'string', 'max:255'],
-            'no_inventaris' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string', 'max:255'],
             'code' => ['string', 'max:255'],
             'year_published' => 'required|numeric',
@@ -124,7 +121,6 @@ class BookManagementController extends Controller
         $book->title = $request->title;
         $book->author = $request->author;
         $book->publisher = $request->publisher;
-        $book->no_inventaris = $request->no_inventaris;
         $book->description = $request->description;
         $book->year_published = $request->year_published;
         $book->code = $request->code;
