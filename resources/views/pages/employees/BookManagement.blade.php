@@ -272,7 +272,6 @@
             clearqr();
         }
 
-        // Buat instance Html5QrcodeScanner
         let html5QrcodeScanner = new Html5QrcodeScanner(
             "reader", {
                 fps: 10,
@@ -284,7 +283,6 @@
             /* verbose= */
             false);
 
-        // Render Html5QrcodeScanner
         html5QrcodeScanner.render(onScanSuccess, onScanFailure);
 
         function clearqr() {
