@@ -8,6 +8,7 @@ use App\Http\Controllers\CompleteAccountController;
 use App\Http\Controllers\EmployeeManagementController;
 use App\Http\Controllers\EmployeesIndexController;
 use App\Http\Controllers\EmployeeVerificationController;
+use App\Http\Controllers\LendingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
@@ -65,8 +66,16 @@ Route::middleware(['employeeallow'])->group(function () {
     Route::delete('/employees/book/delete/{id}', [BookManagementController::class, 'destroy']);
 
     Route::get('/employees/borrowers', [BorrowersController::class, 'index'])->name('employees.borrowers');
-});
 
+    Route::get('/employees/addlending', [LendingController::class, 'index'])->name('lending.index');
+    Route::get('/employees/show/validasi/lending/{id}', [LendingController::class, 'showvalidasilendings'])->name('lending.validasi');
+    Route::get('/employees/getlending/{id}', [LendingController::class, 'getlendings'])->name('lending.get');
+    Route::put('/employees/putlending/{id}', [LendingController::class, 'validateLending'])->name('lending.put');
+    Route::get('/employees/return/lending/{id}', [LendingController::class, 'returnLending'])->name('lending.return');
+
+    Route::post('/employees/validasi/input/lending', [LendingController::class, 'showInputvalidasilendings'])->name('lending.input.post');
+    Route::post('/employees/return/input/lending', [LendingController::class, 'returnInputLending'])->name('lending.return.post');
+});
 Route::get('/logout', function () {
     Auth::logout();
     return redirect('/')->with('success', 'Success Logout');

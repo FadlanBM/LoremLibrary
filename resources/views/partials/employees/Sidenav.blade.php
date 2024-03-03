@@ -37,19 +37,11 @@
                 <span class="text-sm">Kategory</span>
             </a>
         </li>
-        <span class="text-gray-400 font-bold">Perpustakaan</span>
-        <li class=" mb-1 group">
-            <a href=""
+        <li class="{{ request()->is('employees/addlending') ? 'active' : '' }} mb-1 group">
+            <a href="{{route('lending.index')}}"
                 class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                 <i class='bx bx-add-to-queue mr-3 text-lg'></i>
                 <span class="text-sm">Add Peminjam</span>
-            </a>
-        </li>
-        <li class=" mb-1 group">
-            <a href=""
-                class="flex font-semibold items-center py-2 px-4 text-gray-900 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
-                <i class='bx bx-history mr-3 text-lg'></i>
-                <span class="text-sm">History Peminjam</span>
             </a>
         </li>
     </ul>
